@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Casta, Poppins;
+  src: url(fonts/Casta-Thin.otf);
+  src: url(fonts/Poppins-Medium.ttf);
+}
+
+style * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+}
+.row {
+  background: white;
+  border-radius: 30px;
+}
+img {
+  border-radius: 30px;
+}
+.btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  font-family: Casta;
+  font-size: large;
+}
+.btn:hover {
+  background: white;
+  border: 1px solid;
+  color: black;
+}
+form {
+  width: 100%;
+}

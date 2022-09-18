@@ -1,0 +1,50 @@
+<?php
+class m_barang extends CI_Model {
+
+    public function __construct(){
+        parent::__construct();
+        
+    }
+
+	
+
+	
+	//Kategori
+	public function tampil() {
+        return $this->db->get_where("barang", array('kategori' => 'ikan'));
+	}
+	public function kepiting() {
+		return $this->db->get_where("barang", array('kategori' => 'kepiting'));
+	}
+	
+	public function lainnya() {
+		return $this->db->get_where("barang", array('kategori' => 'lainnya'));
+	}
+	public function udang() {
+		return $this->db->get_where("barang", array('kategori' => 'udang'));
+	}
+	
+	public function cumi() {
+		return $this->db->get_where("barang", array('kategori' => 'cumi - cumi'));
+	}
+	
+	//End Kategori
+	
+	//Tambah Keranjang
+	public function find($id){
+		$result = $this->db->where('id', $id)->limit(1)->get('barang');
+		if ($result->num_rows() > 0){
+			return $result->row();
+		}else{
+			return array();
+		}
+	}
+	//End
+
+	public function get_where($id){
+		return $this->db->get_where('barang',array('id'=>$id ));
+	}
+	
+	
+
+}
